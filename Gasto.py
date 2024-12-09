@@ -13,25 +13,35 @@ def menu():
     Sair = "0"
     
     menu = ["Continuar1", "Sair0"]
-    while Continuar:
-        Continuar = int(input("Digite 1 para continuar (0 = Sair)")) 
-        if Continuar == 1:
-            Nome = (input("Informe o Seu Nome"))
-            Gasto1 = float(input("Informe Quanto gastou neste dia"))
-            Gasto2 = float(input("Informe Quanto gastou no segundo dia")) 
-            
-            if Gasto1 > Gasto2:
-                print("Você gastou mais no primeiro dia.") 
-            elif Gasto2 < Gasto1:
-                print("Voce gastou menos que o primeiro dia.")
-            else:
-                print("Voce  Gasotu o mesmo em ambos os dias.")
-                return("Gasto1, Gasto2")
-                """
-                for opções in menu:
-                    opções = "Saindo do Programa..."
-                elif Continuar == 0:
-                    print(opções) 
-                else:
-                    print()
-              """
+    try:
+        menu = int(input("Escolha uma opção:"))
+        if Continuar:
+            print("Digite (1 = Continuar) Para continuar: ")
+            for Continuar in menu:
+                Nome = input("Digite o Seu Nome:")
+                Mes1 = float(input("Informe Quanto Voce Guardou no Primeiro Dia: "))
+                Mes2 = float(input("Informe Quanto Voce Guardou no Segundo Dia: "))
+                Gasto = int(input("Informe Quanto Voce Gastou:"))
+                def som(Mes1, Mes2):
+                    return(Mes1 + Mes2)
+                def div(Mes1, Mes2):
+                    return(Mes1 / Mes2)
+                def mult(Mes1, Mes2):
+                    return(Mes1 * Mes2 * 100)
+                def gasto(Mes1, Mes2):
+                    div = Mes1 / Mes2
+                    if Mes2 != 0:
+                           mult = Mes1 * Mes2
+                           return div, mult
+                    else: 
+                        return"Divisão por zero não permitido", None
+                    soma = som(Mes1, Mes2)
+                    div, mult = Gasto(Mes1, Mes2) 
+                    
+                    print(f"\nResultado {Nome}:") 
+                    print(f"Soma Acumulado: {soma}" + f"Divisão: {div}" + f"Multiplicado: {mult}")
+                    
+                        try:
+                            Sair = input("Para Sair Digite (1 = Sair)")
+                            if Sair == 0:
+                                
