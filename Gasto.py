@@ -41,7 +41,15 @@ def menu():
                     print(f"\nResultado {Nome}:") 
                     print(f"Soma Acumulado: {soma}" + f"Divisão: {div}" + f"Multiplicado: {mult}")
                     
-                    Sair = input("Para Sair Digite (0 = Sair)") 
-                    while opçoes in menu:
-                        print("Saindo... Até Mais")
-                        if
+                    while True:
+                        try:
+                            Sair = input("Para Sair Digite (0 = Sair)") 
+                            if Sair in menu:
+                                print("Saindo... Até Mais!")
+                                break
+                            elif Sair in menu:
+                                print("Saindo da Opção {Sair}")
+                            else:
+                                print("Opção inválida! Tente novamente.")
+                                
+                            
