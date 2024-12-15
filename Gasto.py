@@ -1,59 +1,60 @@
 # -*- coding: utf-8 -*-
 """
-Created on Thu Nov 28 21:01:06 2024
+Created on Sun Dec 15 01:29:13 2024
 
-@author: joaov
+@author: JOAOVITOR
 """
-def menu():
-    print("Olá:")
-    print("Seja Bem Vindo!")
-    print('''
-          Menu:
-              [1] - Continuar
-              [0] - Sair
-          
-    ''')
-    str(input("Escolha uma opção: ")) #Foi definido uma string para chamar as opções do menu
-    
-    Continuar = "1"
-    Sair = "0"
-    
-    menu = ["Continuar1", "Sair0"]
-    try:
-        menu = int(input("Escolha uma opção:"))
-        if Continuar:
-            print("Digite (1 = Continuar) Para continuar: ")
-            for Continuar in menu:
-                Nome = input("Digite o Seu Nome:")
-                Mes1 = float(input("Informe Quanto Voce Guardou no Primeiro Dia: "))
-                Mes2 = float(input("Informe Quanto Voce Guardou no Segundo Dia: "))
-                Gasto = int(input("Informe Quanto Voce Gastou:"))
-                def som(Mes1, Mes2):
-                    return(Mes1 + Mes2)
-                def div(Mes1, Mes2):
-                    return(Mes1 / Mes2)
-                def mult(Mes1, Mes2):
-                    return(Mes1 * Mes2 * 100)
-                def gasto(Mes1, Mes2):
-                    div = Mes1 / Mes2
-                    if Mes2 != 0:
-                           mult = Mes1 * Mes2
-                           return div, mult
-                    else: 
-                        return"Divisão por zero não permitido", None
-                    soma = som(Mes1, Mes2)
-                    div, mult = Gasto(Mes1, Mes2) 
-                    
-                    print(f"\nResultado {Nome}:") 
-                    print(f"Soma Acumulado: {soma}" + f"Divisão: {div}" + f"Multiplicado: {mult}")
-                    
-                    while True:
-                        try:
-                            Sair = input("Para Sair Digite (0 = Sair)") 
-                            if Sair in menu:
-                                print("Saindo... Até Mais!")
-                                break
-                            elif Sair in menu:
-                                print("Saindo da Opção {Sair}")
-                            else:
-                                class menu()
+
+Nome = input("Digite o Seu Nome:")
+Pagamento = float(input("Informe Quanto Você Ganha"))
+Gasto = int(input("Informe Quanto Voce Gastou:")) 
+
+Dia = 7 
+Mes = 12 
+
+match (Dia):
+    case 1:
+        print("Segunda-Feira")
+    case 2:
+        print("Terça-Feira")
+    case 3:
+        print("Quarta-Feira")
+    case 4:
+        print("Quinta-Feira")
+    case 5:
+        print("Sexta-Feira")
+    case 6:
+        print("Sabado")
+    case 7:
+        print("Domingo")
+
+match (Mes):
+    case 1:
+        print("Janeiro")
+    case 2:
+        print("Fevereiro")
+    case 3:
+        print("Março")
+    case 4:
+        print("Abril")
+    case 5:
+        print("Maio")
+    case 6:
+        print("Junho")
+    case 7:
+        print("Julho")
+    case 8:
+        print("Agosto")
+    case 9:
+        print("Setembro")
+    case 10:
+        print("Outubro")
+    case 11:
+        print("Novembro")
+    case 12:
+        print("Dezembro")
+        
+if Dia in Pagamento:
+    Pagamento = "Quanto Voce Recebeu {Pagamento}"
+    for Dia in Mes:
+        
