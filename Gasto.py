@@ -7,9 +7,10 @@ Created on Sun Dec 15 01:29:13 2024
 
 Nome = input("Digite o Seu Nome:")
 Pagamento = float(input("Informe Quanto Você Ganha"))
+Guardou = float(input("Informe Quanto Você Guardou"))
 Gasto = int(input("Informe Quanto Voce Gastou:")) 
 
-Dia = 7 
+Dia = input("Informe a Data do Pagamento {Dia}") 
 Mes = 12 
 
 match (Dia):
@@ -53,7 +54,7 @@ match (Mes):
         print("Novembro")
     case 12:
         print("Dezembro")
-        
+                
 if Dia in Pagamento:
     Pagamento = "Quanto Voce Recebeu {Pagamento}"
     for Dia in Mes:
