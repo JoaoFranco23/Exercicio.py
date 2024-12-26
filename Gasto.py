@@ -1,26 +1,30 @@
-Nome = input("Digite o Seu Nome:")
-Pagamento = float(input("Informe Quanto Você Ganha"))
-Gasto = int(input("Informe Quanto Voce Gastou:")) 
-Guardou = float(input("Informe Quanto Você Guardou"))
+ #Syntaxy responsavel por inserir os dados nas variaveis 
+Nome = input("Digite o Seu Nome: ")
+Pagamento = float(input("Informe Quanto Você Ganha: "))
+Gasto = int(input("Informe Quanto Voce Gastou: "))
+sobrou = type("res")
 
+#Variaveis respossaveis por 
+soma = "Pagamento", "Guardou"
+subtração = "Pagamento", "Gasto"
 
-def subtracao(Gasto, Guardou):
-    return(Gasto - Guardou)
-def soma(Gasto, Guardou):
-    return(Gasto + Guardou)
-def divisão(Guardou, Gasto):
-    if Gasto != 0:
-        return Guardou / Gasto
+res = Pagamento - Gasto
+
+print(f"Olá {Nome}" + f"Do seu pagamento R${res}")
+
+Guardar = input("{Nome} Você Gostaria de Investir ?")
+
+#Definido um questionamento Sim ou Não
+def Qustionamento(pergunta):
+    resposta = input(f"Você Deseja Investir o Seu Dinheiro {pergunta} (Sim/Não)") 
+    if resposta in ["Sim", "S"]:
+        return "Sim"
+    elif resposta in ["Não", "N"]:
+        return "Não"
     else:
-        return "Divisão por zero não permitida"
-    def multiplicação(Guardou, Gasto):
-        return(Guardou * Gasto * 30) 
-    def Gasto(Guardou, Gasto):
-        if Gasto != 0:
-            divisão = Guardou / Gasto
-            multiplicação = Guardou * Gasto
-            return divisão, multiplicação
-        else:
-            return "Divisão por zero não permitida", None 
-        resultado = Gasto(100, 50)
-        print(f"Resultados: Divisão = {resultado[0]}, Multiplicação = {resultado[1]}")
+        return "Por Favor Digite 'Sim' ou 'Não'."
+    
+    pergunta = "Você Deseja Investir o Seu Dinheiro ?"
+    print(f"Questionamento {pergunta}")
+    
+    
