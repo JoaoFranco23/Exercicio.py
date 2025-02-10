@@ -1,0 +1,18 @@
+create database Cadastro; 
+
+use cadastro; 
+
+create table cad(
+Id INT AUTO_INCREMENT PRIMARY KEY,
+Nome varchar(100) not null,
+Idade integer,
+Email varchar(50) not null,
+Senha char(32) not null,
+Cidade varchar(50),
+Uf varchar(2), 
+Cep int(8)
+)engine=InnoDB default charset=latin1 auto_increment=253; 
+
+select * from cad; 
+
+insert into cad set Id = '1', Nome = 'Joao Vitor', Idade = '25', Email = 'joao@hotmail.com', Cidade = 'Adamantina', Uf = 'SP', Cep = '17800.000';
